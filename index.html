@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for Clay</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #f0f0f0;
+        }
+        .caption {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #388e3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="caption">I have a surprise for you Clay</div>
+    <button id="playBtn">Play Surprise</button>
+        <div id="playerContainer" style="display:none; margin-top:20px;">
+            <iframe id="ytplayer" width="360" height="215" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <script>
+            document.getElementById('playBtn').addEventListener('click', function() {
+                var playerContainer = document.getElementById('playerContainer');
+                var ytplayer = document.getElementById('ytplayer');
+                ytplayer.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
+                playerContainer.style.display = 'block';
+            });
+        </script>
+</body>
+</html>
